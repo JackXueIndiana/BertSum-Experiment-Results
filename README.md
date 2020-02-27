@@ -46,6 +46,7 @@ Tokenize the document, ABD.json<br/>
 I copy the first sentence as "tgt" and rename the file to cnndm_sample.train.0.json and then generate the PT file with<br/>
 python3 preprocess.py -mode format_to_bert -raw_path ../jack_test -save_path ../jack_test -oracle_mode greedy -n_cpus 1 -log_file ../logs/preprocess.log
 Rename the PT file to .test.pt and copy to ../bert_data/cnndm<br/>
+
 Run the test with the best model step<br/>
 python3 train.py -mode test  -bert_data_path ../bert_data/cnndm/  -visible_gpus 0  -gpu_ranks 0 -batch_size 30000  -log_file ../logs/bert_test -test_from ../models/bert_classifier/model_step_4000.pt -block_trigram true &<br/>
 
