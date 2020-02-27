@@ -32,6 +32,7 @@ The repo for BertSum was cloned from https://github.com/nlpyang/BertSum on 2/25/
 The processed CNN/DM PT files are downloaded from https://drive.google.com/open?id=1x0d61LP9UAN389YN00z0Pv-7jQgirVg6
 
 ## Test 1
+Test 1 is to test the model that on the top if Bert adding two lyaers of transformer to serve as a classfier.
 ### Fine tuning the model
 Keep only first three PT files (*0.train.pt, *0.valid.pt and *0.test.pt) and rename them to<br/> 
 .test.pt<br/>
@@ -58,7 +59,7 @@ cat cnndm_step4000.gold<br/>
 data lake storage gen2 makes azure storage the foundation for building enterprise data lakes on azure .
 
 ## Test 2
-The same data files, but this time we add all the transformers (parameters increased from 100M to 120M).<br/>
+This tes is to test that similar architecture but with more transformer layers. The same data files, but this time we add all the transformers (parameters increased from 100M to 120M).<br/>
 
 Run this command for training:<br/>
 python3 train.py -mode train -encoder transformer -dropout 0.1 -bert_data_path ../bert_data/cnndm/ -model_path ../models/bert_transformer -lr 2e-3 -visible_gpus 0  -gpu_ranks 0 -world_size 1 -report_every 50 -save_checkpoint_steps 1000 -batch_size 512 -decay_method noam -train_steps 10000 -accum_count 2 -log_file ../logs/bert_transformer -use_interval true -warmup_steps 1000 -ff_size 2048 -inter_layers 2 -heads 8 &
@@ -74,6 +75,10 @@ cat cnndm_step10000.gold<br/>
 data lake storage gen2 makes azure storage the foundation for building enterprise data lakes on azure .<br/>
 
 ## Test 3
+This is to test the architecture as in Test 2 but with RNN layers for abstractive (rewriting).
+
+The run command is<br/>
+python3 train.py -mode train -encoder rnn -dropout 0.1 -bert_data_path ../bert_data/cnndm -model_path ../models/bert_rnn -lr 2e-3 -visible_gpus 0  -gpu_ranks 0 -world_size 1 -report_every 50 -save_checkpoint_steps 2000 -batch_size 512 -decay_method noam -train_steps 10000 -accum_count 2 -log_file ../logs/bert_rnn -use_interval true -warmup_steps 1000 -rnn_size 768 -dropout 0.1
 
 ### Result
 cat cnndm_step4000.candidate<br/>
