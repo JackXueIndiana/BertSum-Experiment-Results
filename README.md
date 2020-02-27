@@ -7,7 +7,7 @@ I am trying to fine tune this model to generate short summaries from technical d
 
 ## Environment
 ### Hardware 
-Standard NV6_Promo (6 vcpus, 56 GiB memory)
+Standard NV6_Promo (6 vcpus, 56 GiB memory)<br/>
 Linux (ubuntu 18.04)
 
 ### Software
