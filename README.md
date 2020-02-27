@@ -86,3 +86,6 @@ designed from the start to service multiple petabytes of information while susta
   
 cat cnndm_step4000.gold<br/>
 data lake storage gen2 makes azure storage the foundation for building enterprise data lakes on azure .<br/>
+
+## Discussion
+Though we only have one document in process and the fine tuning data set is from CNN/DM (thus nothing with our test document), we can see that Bert + Tran + RNN provides a result more human readable.
