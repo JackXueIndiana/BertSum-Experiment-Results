@@ -41,10 +41,10 @@ Run the classification training command<br/>
 python3 train.py -mode train -encoder classifier -dropout 0.1 -bert_data_path ../bert_data/cnndm/ -model_path ../models/bert_classifier -lr 2e-3 -visible_gpus 0  -gpu_ranks 0 -world_size 1 -report_every 50 -save_checkpoint_steps 1000 -batch_size 1000 -decay_method noam -train_steps 10000 -accum_count 2 -log_file ../logs/bert_classifier -use_interval true -warmup_steps 1000 &
 
 ### Test 
-Get the first few paragraphs from a Microsoft Azure Databricks document.<br/>
-Tokenize the document<br/>
-Generate the PT file with<br/>
-python3 preprocess.py -mode format_to_bert -raw_path ../json_data -save_path ../json_data -oracle_mode greedy -n_cpus 1 -log_file ../logs/preprocess.log
+Get the first few paragraphs from a Microsoft Azure Databricks document, azuredatabrickst.txt.<br/>
+Tokenize the document, ABD.json<br/>
+I copy the first sentence as "tgt" and rename the file to cnndm_sample.train.0.json and then generate the PT file with<br/>
+python3 preprocess.py -mode format_to_bert -raw_path ../jack_test -save_path ../jack_test -oracle_mode greedy -n_cpus 1 -log_file ../logs/preprocess.log
 Rename the PT file to .test.pt and copy to ../bert_data/cnndm<br/>
 Run the test with the best model step<br/>
 python3 train.py -mode test  -bert_data_path ../bert_data/cnndm/  -visible_gpus 0  -gpu_ranks 0 -batch_size 30000  -log_file ../logs/bert_test -test_from ../models/bert_classifier/model_step_4000.pt -block_trigram true &<br/>
