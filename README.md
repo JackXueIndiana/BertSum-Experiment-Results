@@ -72,3 +72,12 @@ the hierarchical namespace organizes objects/files into a hierarchy of directori
 
 cat cnndm_step10000.gold<br/>
 data lake storage gen2 makes azure storage the foundation for building enterprise data lakes on azure .<br/>
+
+## Test 3
+
+### Result
+cat cnndm_step4000.candidate<br/>
+designed from the start to service multiple petabytes of information while sustaining hundreds of gigabits of throughput, data lake storage gen2 allows you to easily manage massive amounts of data .<q>a common object store naming convention uses slashes in the name to mimic a hierarchical directory structure .<q>the hierarchical namespace organizes objects/files into a hierarchy of directories for efficient data access .<br/>
+  
+cat cnndm_step4000.gold<br/>
+data lake storage gen2 makes azure storage the foundation for building enterprise data lakes on azure .<br/>
