@@ -1,0 +1,44 @@
+[
+  {
+    "src": [
+["data","lake","storage","gen2","makes","azure","storage","the","foundation","for","building","enterprise","data","lakes","on","azure","."],
+["designed","from","the","start","to","service","multiple","petabytes","of","information","while","sustaining","hundreds","of","gigabits","of","throughput,","data","lake","storage","gen2","allows","you","to","easily","manage","massive","amounts","of","data","."],
+["a","fundamental","part","of","data","lake","storage","gen2","is","the","addition","of","a","hierarchical","namespace","to","blob","storage","."],
+["the","hierarchical","namespace","organizes","objects/files","into","a","hierarchy","of","directories","for","efficient","data","access","."],
+["a","common","object","store","naming","convention","uses","slashes","in","the","name","to","mimic","a","hierarchical","directory","structure","."],
+["this","structure","becomes","real","with","data","lake","storage","gen2","."],
+["operations","such","as","renaming","or","deleting","a","directory","become","single","atomic","metadata","operations","on","the","directory","rather","than","enumerating","and","processing","all","objects","that","share","the","name","prefix","of","the","directory","."],
+["in","the","past,","cloud-based","analytics","had","to","compromise","in","areas","of","performance,","management,","and","security","."],
+["data","lake","storage","gen2","addresses","each","of","these","aspects","in","the","following","ways",":"],
+["performance","is","optimized","because","you","do","not","need","to","copy","or","transform","data","as","a","prerequisite","for","analysis","."],
+["the","hierarchical","namespace","greatly","improves","the","performance","of","directory","management","operations,","which","improves","overall","job","performance","."],
+["management","is","easier","because","you","can","organize","and","manipulate","files","through","directories","and","subdirectories","."],
+["security","is","enforceable","because","you","can","define","posix","permissions","on","directories","or","individual","files","."],
+["cost","effectiveness","is","made","possible","as","data","lake","storage","gen2","is","built","on","top","of","the","low-cost","azure","blob","storage","."],
+["the","additional","features","further","lower","the","total","cost","of","ownership","for","running","big","data","analytics","on","azure","."],
+["key","features","of","data","lake","storage","gen2",":"],
+["hadoop","compatible","access:","data","lake","storage","gen2","allows","you","to","manage","and","access","data","just","as","you","would","with","a","hadoop","distributed","file","system","(hdfs)","."],
+["the","new","abfs","driver","is","available","within","all","apache","hadoop","environments,","including","azure","hdinsight,","azure","databricks,","and","sql","data","warehouse","to","access","data","stored","in","data","lake","storage","gen2","."],
+["a","superset","of","posix","permissions:","the","security","model","for","data","lake","gen2","supports","acl","and","posix","permissions","along","with","some","extra","granularity","specific","to","data","lake","storage","gen2","."],
+["settings","may","be","configured","through","storage","explorer","or","through","frameworks","like","hive","and","spark","."],
+["cost","effective",":","data","lake","storage","gen2","offers","low-cost","storage","capacity","and","transactions","."],
+["as","data","transitions","through","its","complete","lifecycle,","billing","rates","change","keeping","costs","to","a","minimum","via","built-in","features","such","as","azure","blob","storage","lifecycle","."],
+["optimized","driver",":","the","abfs","driver","is","optimized","specifically","for","big","data","analytics","."],
+["the","corresponding","rest","apis","are","surfaced","through","the","endpoint","."],
+["scalability"],
+["azure","storage","is","scalable","by","design","whether","you","access","via","data","lake","storage","gen2","or","blob","storage","interfaces","."],
+["it","is","able","to","store","and","serve","many","exabytes","of","data","."],
+["this","amount","of","storage","is","available","with","throughput","measured","in","gigabits","per","second","(gbps)","at","high","levels","of","input/output","operations","per","second","(iops)","."],
+["beyond","just","persistence,","processing","is","executed","at","near-constant","per-request","latencies","that","are","measured","at","the","service,","account,","and","file","levels","."],
+["cost","effectiveness"],
+["one","of","the","many","benefits","of","building","data","lake","storage","gen2","on","top","of","azure","blob","storage","is","the","low","cost","of","storage","capacity","and","transactions","."],
+["unlike","other","cloud","storage","services,","data","stored","in","data","lake","storage","gen2","is","not","required","to","be","moved","or","transformed","prior","to","performing","analysis","."],
+["for","more","information","about","pricing,","see","azure","storage","pricing","."],
+["additionally,","features","such","as","the","hierarchical","namespace","significantly","improve","the","overall","performance","of","many","analytics","jobs","."],
+["this","improvement","in","performance","means","that","you","require","less","compute","power","to","process","the","same","amount","of","data,","resulting","in","a","lower","total","cost","of","ownership","(tco)","for","the","end-to-end","analytics","job","."]
+],
+ "tgt": [
+["data","lake","storage","gen2","makes","azure","storage","the","foundation","for","building","enterprise","data","lakes","on","azure","."]
+ ]
+}
+]
