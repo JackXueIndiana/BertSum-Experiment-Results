@@ -8,7 +8,10 @@ I am trying to fine tune this model to generate short summaries from technical d
 ## Environment
 ### Hardware 
 Standard NV6_Promo (6 vcpus, 56 GiB memory)<br/>
-Linux (ubuntu 18.04)
+Linux (ubuntu 18.04)<br/>
+Add a data disk to the VM by following https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal<br/>
+Mounted the datadisk as<br/>
+sudo mount /dev/sdc1 /datadrive
 
 ### Software
 NVIDIA Driver Version: 440.59<br/>       
@@ -26,7 +29,7 @@ ROUGE 1.5.5
 
 To install ROUGE correctly, I first follow https://poojithansl7.wordpress.com/2018/08/04/setting-up-rouge/. After ROUGE installed, I installed pytorch by command pip3 install pytorch.
 
-The repo for BertSum was cloned from https://github.com/nlpyang/BertSum on 2/25/2020.
+The repo for BertSum was cloned from https://github.com/nlpyang/BertSum to /datadrive on 2/25/2020.
 
 ### Dataset
 The processed CNN/DM PT files are downloaded from https://drive.google.com/open?id=1x0d61LP9UAN389YN00z0Pv-7jQgirVg6
