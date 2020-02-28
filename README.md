@@ -9,7 +9,7 @@ I am trying to fine tune this model to generate short summaries from technical d
 ### Hardware 
 Standard NV6_Promo (6 vcpus, 56 GiB memory)<br/>
 Linux (ubuntu 18.04)<br/>
-Add a data disk to the VM by following https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal<br/>
+Add a 1TB SDD data disk to the VM by following https://docs.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal<br/>
 Mounted the datadisk as<br/>
 sudo mount /dev/sdc1 /datadrive
 
